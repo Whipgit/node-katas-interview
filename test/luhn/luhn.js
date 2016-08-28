@@ -1,7 +1,7 @@
 var luhn = require('../../luhn/luhn.js');
 var expect = require('chai').expect;
 
-describe('luhn kata', function () {
+describe('luhn.js', function () {
   describe('when calculating value for an odd-indexed digit', function () {
     it('returns 0 when given 0', function () {
       expect(luhn.valueForOddIndexedDigit(0)).to.equal(0);

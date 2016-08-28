@@ -1,8 +1,8 @@
 /*jshint esversion: 6 */
-var fizzbuzz = require('../../fizzbuzz/fizzbuzz.js');
+fizzbuzz = require('../../fizzbuzz/fizzbuzz_optimized.js');
 var expect = require('chai').expect;
 
-describe('fizzbuzz.js', () => {
+describe('fizzbuzz_optimized.js', () => {
   var test = (input, expected) => {
     it(`returns ${expected} when given ${input}`, () => {
       expect(fizzbuzz(input)).to.equal(expected);
@@ -29,4 +29,14 @@ describe('fizzbuzz.js', () => {
   test(19, 19);
   test(20, 'Buzz');
   test(21, 'Fizz');
+
+  var inputError = (input, expected) => {
+    it(`throws error: ${expected} when given ${input}`, () => {
+      expect(function(){
+        fizzbuzz(input);
+      }).to.throw(expected);
+    });
+  };
+
+  inputError('a string', 'fizzbuzz_optimized.js expected a number.');
 });
