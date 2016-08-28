@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-var package = () => {
+const package = () => {
 
   var validate = function (v) {
     // accept only digits, dashes or spaces
@@ -19,7 +19,6 @@ var package = () => {
       .join("");
     sum = sumDigits(testValue);
     return ((sum % 10) === 0) ? true : false;
-
   };
 
   var valueForOddIndexedDigit = function (v) {
@@ -34,7 +33,6 @@ var package = () => {
   var sumDigits = function (i) {
     var numberArray = i.toString().split("");
     return numberArray.reduce((sum, num) => sum + parseInt(num, 10), 0);
-
   };
 
   var getAccountNumberValue = function (v) {

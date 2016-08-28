@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 
-var package = () => {
+const package = () => {
 
   // Process module input
   function processInput(input) {

@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */
-var package = () => {
+const package = () => {
 
 	//returns a number luhn validation: true or false
 	var validate = (value) => {
@@ -52,7 +52,7 @@ var package = () => {
 	return {
 		validate: validate,
 		generateCheckDigit: generate
-		};
+	};
 };
 
 module.exports = package();
